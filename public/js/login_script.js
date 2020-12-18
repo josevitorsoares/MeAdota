@@ -1,36 +1,18 @@
-const express = require('express')
-const app = express()
-const port = 3000
+var user = "jose.vitor.soares@hotmail.com"
+var password = "sayajinblue"
 
-app.use(express.static('public'))
-app.set('views', 'views')
-app.set('view engine', 'ejs')
-
-app.use(express.urlencoded({ extended: true }))
-
-app.get('/', (req, res) => {
-    res.render('home')
-})
-
-app.get('/login', (req, res) => {
-     res.render('login')
-})
-
-app.get('/home#', (req, res) => {
-    var user = "jose.vitor.soares@hotmail.com"
-    var password = "sayajinblue"
-    
+function validaLogin(){
     document.getElementById("error-e.mail").style.display = "none"
     document.getElementById("error-pass").style.display = "none"
-
+    
     if(isEmpety() == true){
         var chave = document.getElementById("error-pass")
         chave.innerHTML = "Algum campo está vazio"
         chave.style.display = "block"
     } else {
-        var usuario = req.body.login
-        var senha = req.body.password
-
+        var usuario = document.getElementById("login").value
+        var senha = document.getElementById("password").value
+    
         if(user != usuario && password != senha){
             document.getElementById("error-e.mail").style.display = "flex"
             document.getElementById("error-pass").innerHTML = "Senha incorreta"
@@ -41,20 +23,20 @@ app.get('/home#', (req, res) => {
             document.getElementById("error-pass").innerHTML = "Senha incorreta"
             document.getElementById("error-pass").style.display = "flex"
         } else{
-            res.render('/')
+            login()
         }
     }
+    
+}
 
-    function isEmpety(){
-        if(req.body.login == "" || req.body.password == ""){
-            return true
-        } else {
-            return false
-        }
+function login(){
+    window.location.href = "/"
+}
+
+function isEmpety(){
+    if(document.getElementById("login").value == "" || document.getElementById("password").value == ""){
+        return true;
+    } else {
+        return false
     }
-    res.render('login')
-})
-
-app.listen(port, () => {
-
-})
+}
