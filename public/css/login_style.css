@@ -46,7 +46,7 @@
     width: 42px;
     height: 22px;
     top: 29px;
-    left: 564px;
+    left: 610px;
 }
 
 .home:hover{
@@ -67,7 +67,7 @@
     width: 42px;
     height: 22px;
     top: 29px;
-    left: 634px;
+    left: 670px;
 }
 .login:hover{
     color: #51D1CD;
@@ -82,7 +82,7 @@
     text-decoration: none;
 }
 
-.cadastrar-se {
+/* .cadastrar-se {
     position: absolute;
     width: 99px;
     height: 22px;
@@ -92,7 +92,7 @@
 
 .cadastrar-se:hover{
     color: #51D1CD;
-}
+} */
 
 .button-nav {
     position: absolute;

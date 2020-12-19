@@ -30,7 +30,7 @@ function validaLogin(){
 }
 
 function login(){
-    window.location.href = "/"
+    window.location.href = "/home-logado"
 }
 
 function isEmpety(){

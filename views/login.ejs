@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/login_style.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap" rel="stylesheet">
-        <title>MeAdota - Login</title>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login_style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap" rel="stylesheet">
+    <title>MeAdota - Login</title>
+</head>
+
 <body id="body">
     <div>
         <div>
@@ -19,29 +23,33 @@
                 <span class="nav-me nav-adota"><a href="/">Adota</a></span>
                 <p class="home font-nav-botoes"><a href="/">Inicio</a></p>
                 <p class="login font-nav-botoes"><a href="/login">Login</a></p>
-                <p class="cadastrar-se font-nav-botoes" onclick="">Cadastrar-se</p>
+                <!-- <p class="cadastrar-se font-nav-botoes" onclick="">Cadastrar-se</p> -->
                 <a href="/login">
                     <button class="button-nav" onclick="">
                         <h1 class="texto-button-nav">Adicionar Bichinho</h1>
                     </button>
-                    </a>
+                </a>
             </nav>
         </div>
 
         <div class="box-login">
-            <p class="txt-login">Login no <span class="me">Me</span><span class="adota">Adota</span></p>
-            <input id="login" class="input-login" placeholder="E-mail">
-            <span id="error-e.mail" class="error-email font-error">E-mail não cadastrado</span>
-            <input type="password" id="password" class="input-senha" placeholder="Password">
-            <span id="error-pass" class="error-password font-error">Senha incorreta</span>
-            <button class="entrar" onclick="validaLogin()">Entrar</button>
-            <span class="texto-cadastrar">Ainda não tem cadastro? <span class="txt-cadastrar-se"><a href="https://">Cadastre-se aqui!</a></span></span>
+            <form action="/home-logado" method="POST">
+                <p class="txt-login">Login no <span class="me">Me</span><span class="adota">Adota</span></p>
+                <input id="login" class="input-login" placeholder="E-mail">
+                <span id="error_email" class="error-email font-error">E-mail não cadastrado</span>
+                <input type="password" id="password" class="input-senha" placeholder="Password">
+                <span id="error_pass" class="error-password font-error">Senha incorreta</span>
+                 <button class="entrar">Entrar</button> <!-- onclick="validaLogin()" -->
+                <span class="texto-cadastrar">Ainda não tem cadastro? <span class="txt-cadastrar-se"><a
+                            href="https://">Cadastre-se aqui!</a></span></span>
+            </form>
         </div>
 
         <div>
             <footer class="footer font-footer">Copyright © 2020 MeAdota. Alguns direitos reservados.</footer>
         </div>
     </div>
-    <script src="/js/login_script.js"></script>
-</body> 
+    <!-- <script src="/js/login_script.js"></script> -->
+</body>
+
 </html>
