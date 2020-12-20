@@ -1,0 +1,445 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav-me a{
+    position: absolute;
+    width: 157px;
+    height: 39px;
+    left: 130px;
+    top: 22px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 39px;
+    color: #F8D536;
+    text-decoration: none;
+}
+
+.nav-me a:hover{
+    color: #F8D536;
+    text-decoration: none;
+}
+
+.nav-adota a{
+    left: 180px;
+    color: #51D1CD;
+}
+.nav-adota a:hover{
+    color: #51D1CD;
+    text-decoration: none;
+}
+
+.font-nav-botoes{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #4A4A4A;
+}
+
+.home {
+    position: absolute;
+    width: 42px;
+    height: 22px;
+    top: 29px;
+    left: 564px;
+}
+
+.home:hover{
+    color: #51D1CD;
+}
+
+.home a{
+    color: #4A4A4A;
+}
+
+.home a:hover{
+    color: #51D1CD;
+    text-decoration: none;
+}
+
+.login {
+    position: absolute;
+    width: 42px;
+    height: 22px;
+    top: 29px;
+    left: 634px;
+    /* font-weight: normal; */
+}
+.login:hover{
+    color: #51D1CD;
+}
+
+.login a{
+    color: #4A4A4A;
+}
+
+.login a:hover{
+    color: #51D1CD;
+    text-decoration: none;
+}
+
+.cadastrar-se {
+    position: absolute;
+    width: 99px;
+    height: 22px;
+    top: 29px;
+    left: 707px;
+    /* font-weight: normal; */
+}
+
+.cadastrar-se a {
+    color: #4A4A4A;
+}
+
+.cadastrar-se a:hover {
+    color: #51D1CD;
+    text-decoration: none;
+}
+
+.button-nav {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    left: 1060px;
+    top: 15px;
+    background: linear-gradient(90.12deg, #FFD029 -2.6%, #FFDB5E 114.72%);
+    border: none;
+    border-radius: 6px;
+}
+.button-nav:focus{
+    outline: 0;
+}
+
+.texto-button-nav {
+    position: absolute;
+    left: 13.2%;
+    right: 16.4%;
+    top: 26%;
+    bottom: 26%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.sombra{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    box-shadow: 5px 3px 10px rgba(224, 215, 215, 0.5);
+}
+
+.foto-animal{
+    position: absolute;
+    width: 700px;
+    height: 450px;
+    left: 130px;
+    top: 128px;
+    background: #C4C4C4;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.txt-info{
+    position: absolute;
+    width: 383px;
+    height: 48px;
+    left: 862px;
+    top: 128px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: 0.02em;
+    color: #4A4A4A;
+}
+
+.font-dados{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #4A4A4A;
+}
+
+.especie{
+    position: absolute;
+    width: 110px;
+    height: 22px;
+    left: 862px;
+    top: 188px;
+}
+
+.especie span{
+    font-weight: normal;
+}
+
+.sexo{
+    position: absolute;
+    width: 105px;
+    height: 22px;
+    left: 1040px;
+    top: 188px;
+    /* left: 862px;
+    top: 218px; */
+}
+
+.sexo span{
+    font-weight: normal;
+}
+
+.cidade{
+    position: absolute;
+    width: 160px;
+    height: 22px;
+    left: 863px;
+    top: 218px;
+    /* top: 249px; */
+}
+
+.cidade span{
+    font-weight: normal;
+}
+
+.status{
+    position: absolute;
+    width: 160px;
+    height: 22px;
+    left: 1040px;
+    top: 218px;
+    /* top: 249px; */
+}
+
+.status span{
+    font-weight: normal;
+}
+
+.tamanho{
+    position: absolute;
+    width: 80px;
+    height: 22px;
+    left: 863px;
+    top: 249px;
+    /* top: 278px; */
+}
+
+.font-tam{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.tam-p{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 862px;
+    top: 278px;
+    border: 1px solid #51D1CD;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #51D1CD;
+}
+
+.tam-m{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 895px;
+    top: 278px;
+    border: 1px solid #4A4A4A;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #4A4A4A;
+}
+
+.tam-g{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 928px;
+    top: 278px;
+    border: 1px solid #4F4F4F;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #4A4A4A;
+}
+
+.observacoes{
+    position: absolute;
+    width: 107px;
+    height: 22px;
+    left: 861px;
+    top: 320px;
+}
+
+.txt-observacoes{
+    position: absolute;
+    width: 448px;
+    height: 64px;
+    left: 861px;
+    top: 350px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #4A4A4A;
+}
+
+.doador{
+    position: absolute;
+    width: 185px;
+    height: 16px;
+    left: 862px;
+    top: 440px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 33px;
+    display: flex;
+    align-items: center;
+    color: #4A4A4A;
+}
+
+.nome-doador{
+    position: absolute;
+    width: 80px;
+    height: 22px;
+    left: 862px;
+    top: 465px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #4A4A4A;
+}
+
+.button-adotar{
+    position: absolute;
+    width: 448px;
+    height: 50px;
+    left: 862px;
+    top: 528px;
+    background: linear-gradient(90.12deg, #FFD029 -2.6%, #FFDB5E 114.72%);
+    border-radius: 5px;
+    border: none;
+}
+.button-adotar:focus{
+    outline: 0;
+}
+
+.font-button-quero-adotar{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.font-footer{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    padding-top: 3.1%;
+}
+
+.footer{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    left: 0px;
+    top: 635px;
+    background-color: #51D1CD;
+}
+
+.informacoes{
+    font-family: Open Sans;
+    font-style: normal;
+    line-height: 27px;
+    color: #535353;
+}
+
+.informacoes .editar1{
+    font-family: Poppins;
+    font-weight: 900;
+    font-size: 18px;
+    color: #51D1CD;
+}
+
+.informacoes .editar2{
+    font-family: Poppins;
+    font-weight: 500;
+    color: #F8D536;
+}
+
+.informacoes .frase-numero{
+    margin-left: 5px;
+    font-size: 15px;
+    color: #999999;
+
+}
+
+.informacoes .txt-email{
+    font-family: Poppins;
+    font-weight: 500;
+    color: #F8D536;
+}
+
+.informacoes .atencao{
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 16px;
+    color: #F8D536;
+}
+
+.aubrigado{
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 16px;
+    color: #F8D536;
+}
+
+.final{
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 16px;
+    color: #51D1CD;
+}
+
+.button-ok{
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(90.12deg, #FFD029 -2.6%, #FFDB5E 114.72%);
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+
+.button-ok:focus{
+    outline: 0;
+}

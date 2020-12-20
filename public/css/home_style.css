@@ -35,7 +35,7 @@
 .font-nav-botoes{
     font-family: Open Sans;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 16px;
     line-height: 22px;
     color: #4A4A4A;
@@ -90,8 +90,13 @@
     left: 707px;
 }
 
-.cadastrar-se:hover{
+.cadastrar-se a {
+    color: #4A4A4A;
+}
+
+.cadastrar-se a:hover {
     color: #51D1CD;
+    text-decoration: none;
 }
 
 .button-nav {
@@ -226,7 +231,7 @@
     position: absolute;
     width: 386px;
     height: 19px;
-    left: 385px;
+    left: 390px;
     top: 375px;
     font-family: Open Sans;
     font-style: normal;
@@ -661,7 +666,7 @@
     /* background: linear-gradient(113.01deg, rgba(255, 201, 13, 0.4) -0.83%, rgba(255, 216, 82, 0.4) 100%);*/
     background: rgba(255, 216, 82, 0.25);
     border-radius: 5px;
-    background-image: url(images/lupa-hover.png);
+    background-image: url(/images/home/lupa-hover.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 62.5px 62.5px;
