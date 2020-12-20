@@ -1,0 +1,339 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #F2F2F2;
+}
+
+.nav-me a {
+    position: absolute;
+    width: 157px;
+    height: 39px;
+    left: 130px;
+    top: 22px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 39px;
+    color: #F8D536;
+    text-decoration: none;
+}
+
+.nav-me a:hover {
+    color: #F8D536;
+    text-decoration: none;
+}
+
+.nav-adota a {
+    left: 180px;
+    color: #51D1CD;
+}
+
+.nav-adota a:hover {
+    color: #51D1CD;
+    text-decoration: none;
+}
+
+.font-nav-botoes {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #4A4A4A;
+}
+
+.home {
+    position: absolute;
+    width: 42px;
+    height: 22px;
+    top: 29px;
+    left: 564px;
+}
+
+.home:hover {
+    color: #51D1CD;
+}
+
+.home a {
+    color: #4A4A4A;
+}
+
+.home a:hover {
+    color: #51D1CD;
+    text-decoration: none;
+}
+
+.login {
+    position: absolute;
+    width: 42px;
+    height: 22px;
+    top: 29px;
+    left: 634px;
+}
+
+.login:hover {
+    color: #51D1CD;
+}
+
+.login a {
+    color: #4A4A4A;
+}
+
+.login a:hover {
+    color: #51D1CD;
+    text-decoration: none;
+}
+
+.cadastrar-se {
+    position: absolute;
+    width: 99px;
+    height: 22px;
+    top: 29px;
+    left: 707px;
+    color: #51D1CD;
+}
+
+.cadastrar-se a {
+    color: #51d1cd;
+}
+
+.cadastrar-se a:hover {
+    color: #51D1CD;
+    text-decoration: none;
+}
+
+.button-nav {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    left: 1060px;
+    top: 15px;
+    background: linear-gradient(90.12deg, #FFD029 -2.6%, #FFDB5E 114.72%);
+    border: none;
+    border-radius: 6px;
+}
+
+.button-nav:focus {
+    outline: 0;
+}
+
+.texto-buttons {
+    position: absolute;
+    left: 13.2%;
+    right: 16.4%;
+    top: 26%;
+    bottom: 26%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.sombra {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    box-shadow: 5px 3px 10px rgba(224, 215, 215, 0.5);
+}
+
+.img-cat {
+    position: absolute;
+    width: 600px;
+    height: 820px;
+    left: 0px;
+    top: 80px;
+}
+
+.title-text {
+    position: absolute;
+    width: 500px;
+    height: 48px;
+    left: 110px;
+    top: 390px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 10px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.frase-animal {
+    position: absolute;
+    width: 380px;
+    height: 148px;
+    left: 110px;
+    top: 420px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.frase-login {
+    position: absolute;
+    width: 294px;
+    height: 22px;
+    left: 110px;
+    top: 550px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.frase-login a{
+    text-decoration: none;
+    color: #F8D536;
+}
+
+.frase-login a:hover{
+    text-decoration: none;
+    color: #51D1CD;
+}
+
+.frase-cadastro {
+    position: absolute;
+    width: 430px;
+    height: 48px;
+    left: 780px;
+    top: 110px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 48px;
+    letter-spacing: 0.02em;
+    color: #4A4A4A;
+}
+
+.frase-cadastro span {
+    color: #F8D536;
+}
+
+.inputs-cadastro{
+    background-color: #e4ecf2;
+    border: 1px solid #9ad9ea;
+    border-radius: 5px;
+    color: #4A4A4A;
+    padding-left: 30px;
+}
+
+.input-nome{
+    position: absolute;
+    width: 500px;
+    height: 50px;
+    left: 737px;
+    top: 180px;
+}
+
+.input-email{
+    position: absolute;
+    width: 500px;
+    height: 50px;
+    left: 737px;
+    top: 250px;
+}
+
+.input-senha{
+    position: absolute;
+    width: 500px;
+    height: 50px;
+    left: 737px;
+    top: 320px;
+}
+
+.input-numero{
+    position: absolute;
+    width: 500px;
+    height: 50px;
+    left: 737px;
+    top: 390px
+}
+
+.input-cep{
+    position: absolute;
+    width: 240px;
+    height: 50px;
+    left: 737px;
+    top: 460px
+}
+
+.input-estado{
+    position: absolute;
+    width: 240px;
+    height: 50px;
+    left: 997px;
+    top: 460px
+}
+
+.input-cidade{
+    position: absolute;
+    width: 500px;
+    height: 50px;
+    left: 737px;
+    top: 530px
+}
+
+.input-bairro{
+    position: absolute;
+    width: 500px;
+    height: 50px;
+    left: 737px;
+    top: 600px
+}
+
+.input-rua{
+    position: absolute;
+    width: 500px;
+    height: 50px;
+    left: 737px;
+    top: 670px
+}
+
+.button-finalizar{
+    position: absolute;
+    width: 500px;
+    height: 50px;
+    left: 737px;
+    top: 745px;
+    /* background: linear-gradient(90.12deg, #FFD029 -2.6%, #FFDB5E 114.72%); */
+    background-color: #F8D536;
+    border: none;
+    border-radius: 6px;
+}
+
+
+.font-footer {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    padding-top: 3.1%;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    left: 0px;
+    top: 820px;
+    background-color: #51D1CD;
+}
