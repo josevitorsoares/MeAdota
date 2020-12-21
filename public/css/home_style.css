@@ -6,7 +6,7 @@
     top: 144px;
     font-family: Poppins;
     font-style: normal;
-    font-weight: 900;
+    font-weight: 600;
     font-size: 48px;
     line-height: 72px;
     text-align: center;
@@ -15,8 +15,8 @@
 .font-me-adota{
     font-family: Poppins;
     font-style: normal;
-    font-weight: 900;
-    font-size: 48px;
+    font-weight: 700;
+    font-size: 45px;
     line-height: 72px;
     text-align: center;
 }
@@ -25,7 +25,7 @@
     position: absolute;
     width: 726px;
     height: 72px;
-    left: 453px;
+    left: 455px;
     top: 144px;
     color: #F8D536;
 }
@@ -34,7 +34,7 @@
     position: absolute;
     width: 726px;
     height: 72px;
-    left: 565px;
+    left: 564px;
     top: 144px;
     color: #51D1CD;
 }
@@ -47,7 +47,7 @@
     top: 232px;
     font-family: Open Sans;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     text-align: center;
@@ -107,7 +107,7 @@
 .fonte{
     font-family: Poppins;
     font-style: normal;
-    font-weight: 900;
+    font-weight: 600;
     font-size: 32px;
     line-height: 48px;
     letter-spacing: 0.02em;
@@ -507,10 +507,12 @@
 
 .footer{
     position: absolute;
+    bottom: 0;
+    clear: both;
     width: 100%;
     height: 100px;
-    left: 0px;
-    top: 2050px;
+    left: 0;
+    /* top: 2050px; */
     background-color: #51D1CD;
 }
 

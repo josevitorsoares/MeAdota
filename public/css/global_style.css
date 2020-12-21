@@ -117,17 +117,25 @@
 
 .texto-button-nav {
     position: absolute;
-    left: 13.2%;
+    /* left: 13.2%;
     right: 16.4%;
     top: 26%;
-    bottom: 26%;
+    bottom: 26%; */
+    text-align: center;
     font-family: Poppins;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 16px;
     line-height: 24px;
     text-transform: uppercase;
     color: #FFFFFF;
+}
+
+.position-button-adicionar{
+    left: 13.2%;
+    right: 16.4%;
+    top: 26%;
+    bottom: 26%;
 }
 
 .sombra{

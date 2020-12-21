@@ -13,14 +13,14 @@
     border-radius: 5px;
 }
 
-.font-me-adota{
+/* .font-me-adota{
     font-family: Poppins;
     font-style: normal;
     font-weight: 900;
     font-size: 48px;
     line-height: 72px;
     text-align: center;
-}
+} */
 
 .txt-login{
     position: absolute;
@@ -30,7 +30,7 @@
     top: 48px;
     font-family: Poppins;
     font-style: normal;
-    font-weight: 900;
+    font-weight: 600;
     font-size: 32px;
     line-height: 48px;
     text-align: center;
@@ -38,11 +38,11 @@
     color: #4A4A4A;
 }
 
-.txt-login .me {
+.txt-login #me {
     color: #F8D536;
 }
 
-.txt-login .adota{
+.txt-login #adota{
     color: #51D1CD;
 }
 
@@ -91,7 +91,7 @@
     top: 185px;
 }
 
-.input-senha{
+.input-senha-login{
     position: absolute;
     width: 350px;
     height: 50px;
@@ -153,12 +153,12 @@
     position: absolute;
     width: 336px;
     height: 22px;
-    left: 95px;
+    left: 89px;
     top: 390px;
     font-family: Open Sans;
     font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 15.7px;
     line-height: 22px;
     letter-spacing: 0.02em;
     color: #4A4A4A;
@@ -181,10 +181,10 @@
     padding-top: 3.1%;
 }
 
-.footer{
+/* .footer{
     position: absolute;
     width: 100%;
     height: 100px;
-    top: 650px;
+    /* top: 650px; 
     background-color: #51D1CD;
-}
+} */
