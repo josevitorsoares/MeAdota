@@ -1,24 +1,21 @@
 const express = require('express')
+const { animal } = require('./controllers/userController')
 const router = express.Router()
 
-router.get('/', (req, res) => {
-    res.render('pages/home')
-})
+const userController = require('./controllers/userController')
 
-router.get('/login', (req, res) => {
-     res.render('pages/login')
-})
+router.get('/', userController.home)
 
-router.get('/home-logado', (req, res) => {
-    res.render('home-logado')
-})
+router.get('/home', userController.home)
 
-router.get('/cadastro-usuario', (req, res) => {
-    res.render('pages/cadastro-usuario')
-})
+router.get('/login', userController.login)
 
-router.get('/animal', (req, res) => {
-    res.render('pages/animal')
-})
+router.get('/home-logado', userController.home_logado)
+
+router.get('/cadastro-usuario', userController.cadastro_usuario)
+
+router.post('/register', userController.create_user)
+
+router.get('/animal', userController.animal)
 
 module.exports = router

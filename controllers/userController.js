@@ -1,3 +1,5 @@
+ const User = require('../models/User')
+
 exports.home = function (req, res) {
     res.render('pages/home')
 }
@@ -15,9 +17,8 @@ exports.cadastro_usuario = function (req, res) {
 }
 
 exports.create_user = function (req, res) {
-    // console.log(req.body)
     let user = new User(req.body)
-    user.create()
+    user.create_user()
 }
 
 exports.animal = function (req, res) {

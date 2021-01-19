@@ -1,11 +1,9 @@
- const User = require('../models/User') 
-
 let User = function (data) {
     this.data = data
     this.errors = []
 }
 
-User.prototype.create = function () {
+User.prototype.create_user = function () {
     //TODO
     console.log(this.data)
 }

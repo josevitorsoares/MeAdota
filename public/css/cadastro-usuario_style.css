@@ -87,6 +87,10 @@
     padding-left: 30px;
 }
 
+.inputs-cadastro:focus{
+    outline: 0;
+}
+
 .input-nome{
     position: absolute;
     width: 500px;
@@ -168,6 +172,10 @@
     background-color: #F8D536;
     border: none;
     border-radius: 6px;
+}
+
+.button-finalizar:focus{
+    outline: 0;
 }
 
 .font-footer {
