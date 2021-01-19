@@ -15,7 +15,9 @@ exports.cadastro_usuario = function (req, res) {
 }
 
 exports.create_user = function (req, res) {
-    console.log(req.body)
+    // console.log(req.body)
+    let user = new User(req.body)
+    user.create()
 }
 
 exports.animal = function (req, res) {
