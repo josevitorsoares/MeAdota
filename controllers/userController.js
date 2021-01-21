@@ -8,9 +8,9 @@ exports.login = function (req, res) {
     res.render('pages/login')
 }
 
-exports.home_logado = function (req, res) {
-    res.render('home-logado')
-}
+// exports.home_logado = function (req, res) {
+//     res.render('pages/home-logado')
+// }
 
 exports.cadastro_usuario = function (req, res) {
     res.render('pages/cadastro-usuario')
