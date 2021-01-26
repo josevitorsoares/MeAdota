@@ -10,8 +10,6 @@ router.get('/home', userController.home)
 
 router.get('/login', userController.login)
 
-// router.get('/home-logado', userController.home_logado)
-
 router.get('/cadastro-usuario', userController.cadastro_usuario)
 
 router.post('/register', userController.create_user)
