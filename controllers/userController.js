@@ -14,8 +14,10 @@ exports.cadastro_usuario = function (req, res) {
 
 exports.create_user = function (req, res) {
     let user = new User(req.body)
-    user.create_user().then(function (result) {
+    user.create_user().then(function (results) {
         res.render('pages/home')
+    }).then(function (id) {
+        user.insertEndereco(id)
     }).catch(function (error) {
         res.send(error)
     })
