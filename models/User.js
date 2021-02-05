@@ -5,7 +5,7 @@ let User = function (data) {
     this.errors = []
 }
 
-User.prototype.create_user = function () {
+User.prototype.create_user = async function () {
 
     const query_usuario = {
         text: 'insert into usuario(nome, email, senha, whatsapp) values ($1, $2, $3, $4) returning id_usuario',
@@ -18,30 +18,15 @@ User.prototype.create_user = function () {
             if (error) {
                 reject(error)
             } else {
-                let id_usuario_fk
-                id_usuario_fk = results.rows[0]
+                let id_usuario
+                id_usuario = results.rows[0]
 
-                resolve(id_usuario_fk[0])
-                
+                console.log("Usuario inserido com sucesso!")
+                // console.log(id_usuario[0])
 
-                console.log('Usuario inserido com sucesso!')
-                console.log(id_usuario_fk[0])
+                resolve(id_usuario[0])
             }
-        })
-    })
-}
-
-User.prototype.insertEndereco = function (id) {
-    const query_endereco = 'insert into endereco(cep, estado, cidade, bairro, rua, id_usuario_fk) values ($1, $2, $3, $4, $5, 6$)'
-    const values_endereco = [this.data.input_cep, this.data.input_estado, this.data.input_cidade, this.data.input_bairro, this.data.input_rua, id]
-
-    new Promisse((resolve, reject) => {
-        pool.query(query_endereco, values_endereco, (error, results) => {
-            if(error){
-                reject(error)
-            } else {
-                resolve('Endereco insereido com sucesso')
-            }
+            pool.end()
         })
     })
 }

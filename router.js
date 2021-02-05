@@ -12,7 +12,7 @@ router.get('/login', userController.login)
 
 router.get('/cadastro-usuario', userController.cadastro_usuario)
 
-router.post('/register', userController.create_user)
+router.post('/register', userController.save_user)
 
 router.get('/animal', userController.animal)
 
