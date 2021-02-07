@@ -1,11 +1,11 @@
 <%- contentFor('main') %>
 <div class="box-login">
-    <form action="/home-logado" method="POST">
+    <form action="login" method="POST">
         <p class="txt-login">Login no <span id="me">Me</span><span id="adota">Adota</span></p>
-        <input id="login" class="input-login" placeholder="E-mail">
-        <span id="error_email" class="error-email font-error">E-mail não cadastrado</span>
-        <input type="password" id="password" class="input-senha-login" placeholder="Password">
-        <span id="error_pass" class="error-password font-error">Senha incorreta</span>
+        <input name="email" id="login" class="input-login" placeholder="E-mail">
+        <!-- <span id="error_email" class="error-email font-error">E-mail não cadastrado</span> -->
+        <input name="senha" type="password" id="password" class="input-senha-login" placeholder="Password">
+        <!-- <span id="error_pass" class="error-password font-error">Senha incorreta</span> -->
          <button class="entrar">Entrar</button> <!-- onclick="validaLogin()" -->
         <span class="texto-cadastrar">Ainda não tem cadastro? <span class="txt-cadastrar-se"><a
                     href="/cadastro-usuario">Cadastre-se aqui!</a></span></span>

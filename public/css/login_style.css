@@ -1,8 +1,8 @@
-#body{
+#body {
     background-color: #f2f2f2;
 }
 
-.box-login{
+.box-login {
     position: absolute;
     width: 515px;
     height: 440px;
@@ -22,7 +22,7 @@
     text-align: center;
 } */
 
-.txt-login{
+.txt-login {
     position: absolute;
     width: 307px;
     height: 48px;
@@ -42,11 +42,11 @@
     color: #F8D536;
 }
 
-.txt-login #adota{
+.txt-login #adota {
     color: #51D1CD;
 }
 
-.font-error{
+.font-error {
     font-family: Open Sans;
     font-style: normal;
     font-weight: bold;
@@ -55,7 +55,7 @@
     color: rgb(231, 19, 19);
 }
 
-.input-login{
+.input-login {
     position: absolute;
     width: 350px;
     height: 50px;
@@ -68,7 +68,7 @@
     padding-left: 25px;
 }
 
-.input-login::placeholder{
+.input-login::placeholder {
     font-family: Open Sans;
     font-style: normal;
     font-weight: 400;
@@ -78,11 +78,11 @@
     padding-left: 0.2rem;
 }
 
-.input-login:focus{
-   outline: 0;
+.input-login:focus {
+    outline: 0;
 }
 
-.error-email{
+.error-email {
     display: none;
     position: absolute;
     width: 350px;
@@ -91,7 +91,7 @@
     top: 185px;
 }
 
-.input-senha-login{
+.input-senha-login {
     position: absolute;
     width: 350px;
     height: 50px;
@@ -104,7 +104,7 @@
     padding-left: 25px;
 }
 
-.input-senha::placeholder{
+.input-senha-login::placeholder {
     font-family: Open Sans;
     font-style: normal;
     font-weight: 400;
@@ -114,7 +114,11 @@
     padding-left: 0.2rem;
 }
 
-.error-password{
+.input-senha-login:focus {
+    outline: 0;
+}
+
+.error-password {
     display: none;
     position: absolute;
     width: 350px;
@@ -123,11 +127,11 @@
     top: 275px;
 }
 
-.input-senha:focus{
+.input-senha:focus {
     outline: 0;
- }
+}
 
-.entrar{
+.entrar {
     position: absolute;
     width: 350px;
     height: 50px;
@@ -145,11 +149,11 @@
     color: #F2F2F2;
 }
 
-.entrar:focus{
+.entrar:focus {
     outline: 0;
 }
 
-.texto-cadastrar{
+.texto-cadastrar {
     position: absolute;
     width: 336px;
     height: 22px;
@@ -164,12 +168,12 @@
     color: #4A4A4A;
 }
 
-.texto-cadastrar span a{
-    color:  #51D1CD;
+.texto-cadastrar span a {
+    color: #51D1CD;
     text-decoration: none;
 }
 
-.font-footer{
+.font-footer {
     font-family: Nunito;
     font-style: normal;
     font-weight: bold;
@@ -181,10 +185,10 @@
     padding-top: 3.1%;
 }
 
-.footer-login{
+.footer-login {
     position: absolute;
     width: 100%;
     height: 100px;
-    top: 650px; 
+    top: 650px;
     background-color: #51D1CD;
 }

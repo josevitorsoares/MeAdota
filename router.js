@@ -8,7 +8,9 @@ router.get('/', userController.home)
 
 router.get('/home', userController.home)
 
-router.get('/login', userController.login)
+router.get('/login', userController.login_form)
+
+router.post('/login', userController.login)
 
 router.get('/cadastro-usuario', userController.cadastro_usuario)
 
