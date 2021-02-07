@@ -31,4 +31,20 @@ User.prototype.create_user = async function () {
     })
 }
 
+User.prototype.readOneByUserName = function () {
+    const consulta = "select * from usuario u where u.id_usuario=$1"
+    const values = [this.data.username]
+    return new Promise((resolve, reject) => {
+        pool.query(consulta, values, (error, results) => {
+            if (error) {
+                reject(error)
+            } else {
+                userRecovered = results.rows[0]
+                resolve(userRecovered)
+            }
+        })
+    })
+}
+
+
 module.exports = User
