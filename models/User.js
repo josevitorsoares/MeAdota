@@ -1,4 +1,5 @@
 const pool = require('../db')
+const bcrypt = require('bcryptjs')
 
 let User = function (data) {
     this.data = data
@@ -8,13 +9,14 @@ let User = function (data) {
 User.prototype.login = function () {
     return new Promise((resolve, reject)=>{
         this.readOneByUserName().then((usuarioRecuperado)=>{
-            if(usuarioRecuperado && usuarioRecuperado.senha == this.data.senha) {
+            if(usuarioRecuperado &&  bcrypt.compareSync(this.data.senha, usuarioRecuperado.senha)) {
                 resolve('Usuario valido')
             } else {
                 reject('Usuario invalido')
             }
-        }).catch(() => {
+        }).catch((error) => {
             reject('Erro ao fazer login')
+            console.log(error)
         })
     })
 }
@@ -34,7 +36,10 @@ User.prototype.readOneByUserName = function () {
     })
 }
 
-User.prototype.createUuser = async function () {
+User.prototype.createUser = async function () {
+    let salt = bcrypt.genSaltSync(10)
+    this.data.input_senha = bcrypt.hashSync(this.data.input_senha, salt)
+
     const query_usuario = {
         text: 'insert into usuario(nome, email, senha, whatsapp) values ($1, $2, $3, $4) returning id_usuario',
         rowMode: 'array'
@@ -50,7 +55,6 @@ User.prototype.createUuser = async function () {
                 console.log('Usuario inserido com sucesso!')
                 resolve(id_usuario_fk[0])
             }
-            pool.end()
         })
     })
 }

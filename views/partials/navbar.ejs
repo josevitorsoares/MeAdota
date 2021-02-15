@@ -4,9 +4,19 @@
     <p class="home font-nav-botoes"><a href="/">Inicio</a></p>
     <p class="login font-nav-botoes"><a href="/login">Login</a></p>
     <p class="cadastrar-se font-nav-botoes"><a href="/cadastro-usuario">Cadastrar-se</a></p>
-    <a href="/login">
-        <button class="button-nav" onclick="">
-            <h1 class="texto-button-nav position-button-adicionar">Adicionar Bichinho</h1>
-        </button>
-    </a>
+    <%if (locals.user) {%>
+        <a class="logado" href="">Olá, <%= user.nome %> </a>
+        <a href="/">
+            <button class="button-nav" onclick="">
+                <h1 class="texto-button-nav position-button-adicionar">Adicionar Bichinho</h1>
+            </button>
+        </a>
+    <%} else {%>
+        <a href="/login">
+            <button class="button-nav" onclick="">
+                <h1 class="texto-button-nav position-button-adicionar">Adicionar Bichinho</h1>
+            </button>
+        </a>
+    <% }%>
+    
 </nav>
