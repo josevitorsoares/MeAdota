@@ -10,7 +10,7 @@ User.prototype.login = function () {
     return new Promise((resolve, reject)=>{
         this.readOneByUserName().then((usuarioRecuperado)=>{
             if(usuarioRecuperado &&  bcrypt.compareSync(this.data.senha, usuarioRecuperado.senha)) {
-                resolve('Usuario valido')
+                resolve(usuarioRecuperado.nome)
             } else {
                 reject('Usuario invalido')
             }
@@ -22,7 +22,7 @@ User.prototype.login = function () {
 }
 
 User.prototype.readOneByUserName = function () {
-    const consulta = "select * from usuario u where u.email=$1"
+    const consulta = "select * from usuario u where u.email like $1"
     const values = [this.data.email]
     return new Promise((resolve, reject) => {
         pool.query(consulta, values, (error, results) => {
