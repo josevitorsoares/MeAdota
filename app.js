@@ -16,7 +16,7 @@ const port = 3000
 
 let sessionOptions = session({
     store: new pgSession({
-        pool: pool,               
+        pool: pool,
         tableName: 'user_sessions'
     }),
     secret: 'ajkluwebuiṕśjfbksfçguiwńjgbanfbluwernfbç',
@@ -34,8 +34,10 @@ app.set('views', 'views')
 app.set('view engine', 'ejs')
 app.use(expressLayouts)
 
-app.use(function(req, res, next){
+app.use(function (req, res, next) {
     res.locals.user = req.session.user
+
+    next()
 })
 
 app.use(express.urlencoded({ extended: false }))
@@ -43,4 +45,4 @@ app.use(express.json())
 
 app.use('/', router)
 
-app.listen(port, ()=>{})
+app.listen(port, () => { })

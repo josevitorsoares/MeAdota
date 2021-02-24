@@ -4,7 +4,7 @@
 }
 
 
-.nav-me a{
+.nav-me{
     position: absolute;
     width: 157px;
     height: 39px;
@@ -19,16 +19,16 @@
     text-decoration: none;
 }
 
-.nav-me a:hover{
+.nav-me:hover{
     color: #F8D536;
     text-decoration: none;
 }
 
-.nav-adota a{
+.nav-adota{
     left: 180px;
     color: #51D1CD;
 }
-.nav-adota a:hover{
+.nav-adota:hover{
     color: #51D1CD;
     text-decoration: none;
 }
@@ -52,13 +52,18 @@
 
 .home:hover{
     color: #51D1CD;
+    text-decoration: none;
 }
 
-.home a{
-    color: #4A4A4A;
+.home-logado {
+    position: absolute;
+    width: 42px;
+    height: 22px;
+    top: 29px;
+    left: 570px;
 }
 
-.home a:hover{
+.home-logado:hover{
     color: #51D1CD;
     text-decoration: none;
 }
@@ -73,16 +78,9 @@
 }
 .login:hover{
     color: #51D1CD;
-}
-
-.login a{
-    color: #4A4A4A;
-}
-
-.login a:hover{
-    color: #51D1CD;
     text-decoration: none;
 }
+
 
 .cadastrar-se {
     position: absolute;
@@ -90,14 +88,10 @@
     height: 22px;
     top: 29px;
     left: 707px;
-    /* font-weight: normal; */
 }
 
-.cadastrar-se a {
-    color: #4A4A4A;
-}
 
-.cadastrar-se a:hover {
+.cadastrar-se:hover {
     color: #51D1CD;
     text-decoration: none;
 }
