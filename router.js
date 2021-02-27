@@ -18,4 +18,8 @@ router.post('/register', userController.save_user)
 
 router.get('/animal', userController.animal)
 
+router.get('/cadastro-animal', userController.cadastro_animal)
+
+router.get('/logout', userController.logout)
+
 module.exports = router

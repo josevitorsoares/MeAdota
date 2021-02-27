@@ -56,3 +56,11 @@ exports.animal = function (req, res) {
         res.render('pages/animal')
     }
 }
+
+exports.cadastro_animal = function(req, res){
+    if (req.session.user) {
+        res.render('pages/cadastro-animal')
+    } else {
+        res.render('pages/cadastro-animal')
+    }
+}
