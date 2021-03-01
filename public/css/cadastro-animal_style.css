@@ -415,6 +415,7 @@
     left: 580px;
     top: 1030px;
     font-size: 14px;
+    text-transform: none;
 }
 
 .span-addfoto{
@@ -423,6 +424,7 @@
     height: 26px;
     left: 580px;
     top: 1085px;
+    text-transform: none;
 }
 
 #imagem-bichinho{

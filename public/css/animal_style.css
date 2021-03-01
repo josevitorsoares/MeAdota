@@ -256,7 +256,7 @@
 .informacoes .editar2{
     font-family: Poppins;
     font-weight: 500;
-    color: #F8D536;
+    color: #51D1CD;
 }
 
 .informacoes .frase-numero{
@@ -269,7 +269,7 @@
 .informacoes .txt-email{
     font-family: Poppins;
     font-weight: 500;
-    color: #F8D536;
+    color: #51D1CD;
 }
 
 .informacoes .atencao{
@@ -304,4 +304,8 @@
 
 .button-ok:focus{
     outline: 0;
+}
+
+.close:focus{
+    outline: none;
 }

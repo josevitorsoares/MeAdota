@@ -57,10 +57,10 @@ exports.animal = function (req, res) {
     }
 }
 
-exports.cadastro_animal = function(req, res){
+exports.isLogged = function (req, res, next){
     if (req.session.user) {
-        res.render('pages/cadastro-animal')
+        next()
     } else {
-        res.render('pages/cadastro-animal')
+        res.redirect('pages/login')
     }
 }

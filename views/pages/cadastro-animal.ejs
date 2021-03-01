@@ -7,40 +7,40 @@
             <a class="font-menu-side logout" href="/logout">Sair</a>
         </div>
         <div>
-            <form action="">
+            <form action="/cadastro-animal" method="POST">
                 <span class="titulo-add">Adicionar Novo Bichinho</span>
-                <input class="inputs-add nome-add" type="text" placeholder="Nome do bichinho">
-                <textarea class="inputs-add descricao-add" type="text" placeholder="Descrição"></textarea>
-                <input class="inputs-add especie-add" type="text" placeholder="Espécie">
+                <input name="nome_animal" class="inputs-add nome-add" type="text" placeholder="Nome do bichinho">
+                <textarea name="descricao" class="inputs-add descricao-add" type="text" placeholder="Descrição"></textarea>
+                <input name="especie" class="inputs-add especie-add" type="text" placeholder="Espécie">
                 <span class="font-radiobutton title-sexo">Sexo:</span>
                 <span class="font-subtitle-buttons subtitle-masculino">Macho</span>
-                <input class="radio-buttons masculino-button" type="radio" name="sexo" value="macho">
+                <input name="sexo" class="radio-buttons masculino-button" type="radio" value="macho">
                 <span class="font-subtitle-buttons subtitle-feminino">Fêmea</span>
-                <input class="radio-buttons feminino-button" type="radio" name="sexo" value="fêmea">
+                <input name="sexo" class="radio-buttons feminino-button" type="radio" value="fêmea">
                 <span class="font-radiobutton title-tamanho">Tamanho:</span>
                 <span class="font-subtitle-buttons subtitle-pequeno">Pequeno</span>
-                <input class="radio-buttons pequeno-button" type="radio" name="tamanho" value="pequeno">
+                <input name="tamanho" class="radio-buttons pequeno-button" type="radio" value="pequeno">
                 <span class="font-subtitle-buttons subtitle-medio">Médio</span>
-                <input class="radio-buttons medio-button" type="radio" name="tamanho" value="médio">
+                <input name="tamanho" class="radio-buttons medio-button" type="radio" value="médio">
                 <span class="font-subtitle-buttons subtitle-grande">Grande</span>
-                <input class="radio-buttons grande-button" type="radio" name="tamanho" value="grande">
-                <input class="inputs-add add-estado" placeholder="Estado" id="">
-                <input class="inputs-add add-cidade" placeholder="Cidade" id="">
+                <input name="tamanho" class="radio-buttons grande-button" type="radio" value="grande">
+                <input name="estado" class="inputs-add add-estado" placeholder="Estado" id="">
+                <input name="cidade" class="inputs-add add-cidade" placeholder="Cidade" id="">
                 <span class="font-radiobutton cuidados-add">Cuidados veterinários:</span>
-                <input class="checkbox-buttons castrado-check" type="checkbox" name="cuidados" id="">
+                <input name="cuidados" class="checkbox-buttons castrado-check" type="checkbox" id="">
                 <span class="font-subtitle-buttons subtitle-castrado">Castrado</span>
-                <input class="checkbox-buttons vacinado-check" type="checkbox" name="cuidados" id="">
+                <input name="cuidados" class="checkbox-buttons vacinado-check" type="checkbox" id="">
                 <span class="font-subtitle-buttons subtitle-vacinado">Vacinado</span>
-                <input class="checkbox-buttons vermifugado-check" type="checkbox" name="cuidados" id="">
+                <input name="cuidados" class="checkbox-buttons vermifugado-check" type="checkbox" id="">
                 <span class="font-subtitle-buttons subtitle-vermifugado">Vermifugado</span>
-                <input class="checkbox-buttons necessita-check" type="checkbox" name="cuidados" id="">
+                <input name="cuidados" class="checkbox-buttons necessita-check" type="checkbox" id="">
                 <span class="font-subtitle-buttons subtitle-necessita">Necessita de cuidados especiais</span>
-                <textarea class="inputs-add observacoes-add" placeholder="Observações"></textarea>
+                <textarea name="observacoes" class="inputs-add observacoes-add" placeholder="Observações"></textarea>
                 <span class="font-subtitle-buttons dica-add">Aqui você pode colocar caracteristicas a mais do seu
                     bichinho.</span>
                 <span class="font-radiobutton span-addfoto">Adicione uma foto do seu bichinho:</span>
                 <label class="texto-button-nav label-imagem" for="imagem-bichinho">Selecionar Imagem</label>
-                <input type="file" name="imagem-bichinho" id="imagem-bichinho" accept="image/*">
+                <input name="imagem_animal" type="file" name="imagem-bichinho" id="imagem-bichinho" accept="image/*">
 
                 <button class="btn-add texto-button-nav" type="submit">Adicionar Bichinho</button>
             </form>
