@@ -137,6 +137,7 @@
     top: 300px;
     padding-top: 13px;
     resize: none;
+    text-transform: none;
 }
 
 .especie-add {
@@ -145,6 +146,7 @@
     height: 50px;
     left: 580px;
     top: 445px;
+    text-transform: none;
 }
 
 .font-radiobutton {
@@ -406,6 +408,7 @@
     top: 925px;
     resize: none;
     padding-top: 13px;
+    text-transform: none;
 }
 
 .dica-add {

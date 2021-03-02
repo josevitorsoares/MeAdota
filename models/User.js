@@ -40,20 +40,40 @@ User.prototype.createUser = async function () {
     let salt = bcrypt.genSaltSync(10)
     this.data.input_senha = bcrypt.hashSync(this.data.input_senha, salt)
 
-    const query_usuario = {
-        text: 'insert into usuario(nome, email, senha, whatsapp) values ($1, $2, $3, $4) returning id_usuario',
-        rowMode: 'array'
-    }
-    const values_usuario = [this.data.input_nome, this.data.input_email, this.data.input_senha, this.data.input_numero]
+    const query_usuario = 'insert into usuario(nome, email, senha, whatsapp, cep, estado, cidade, bairro, rua) values ($1, $2, $3, $4, $5, $6, $7, $8, $9)'
+    const values_usuario = [
+        this.data.input_nome, 
+        this.data.input_email, 
+        this.data.input_senha, 
+        this.data.input_numero, 
+        this.data.input_cep, 
+        this.data.input_estado, 
+        this.data.input_cidade, 
+        this.data.input_bairro, 
+        this.data.input_rua
+    ]
 
     return new Promise((resolve, reject) => {
         pool.query(query_usuario, values_usuario, (error, results) => {
             if (error) {
                 reject(error)
             } else {
-                let id_usuario_fk = results.rows[0]
-                console.log('Usuario inserido com sucesso!')
-                resolve(id_usuario_fk[0])
+                resolve('Usuario inserido com sucesso!\n'+results)
+            }
+        })
+    })
+}
+
+User.prototype.insertEndereco = async function () {
+    const query_endereco = 'insert into endereco(cep, estado, cidade, bairro, rua, email_usuario_fk) values ($1, $2, $3, $4, $5, 6$)'
+    const values_endereco = [this.data.input_cep, this.data.input_estado, this.data.input_cidade, this.data.input_bairro, this.data.input_rua, this.data.email]
+    
+    return new Promise((resolve, reject) => {
+        pool.query(query_endereco, values_endereco, (error, results) => {
+            if (error) {
+                reject(error);
+            } else {
+                resolve("dados do endereço inseridos com sucesso");
             }
         })
     })

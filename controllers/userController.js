@@ -1,4 +1,3 @@
-// const EnderecoUser = require('../models/EnderecoUser')
 const User = require('../models/User')
 
 exports.home = function (req, res) {
@@ -41,9 +40,11 @@ exports.cadastro_usuario = function (req, res) {
 
 exports.save_user = function (req, res) {
     let user = new User(req.body)
+
     user.createUser().then(function (result_1) {
-        res.redirect('/home')
         return result_1
+    }).then(function(result_2){
+        res.redirect('/login')
     }).catch(function(error){
         res.send(error)
     })

@@ -12,8 +12,7 @@ exports.cadastro_animal = function(req, res){
     let post = new Post(req.body, req.session.user.emailUsuario)
 
     post.create_animal().then(function (results){
-        console.log(results)
-       res.redirect('/home')
+        res.redirect('/home')
     }).catch(function (error){
         res.send(error)
     })
