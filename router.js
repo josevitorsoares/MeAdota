@@ -16,6 +16,6 @@ router.get('/logout', userController.logout)
 
 //  Rotas do Post
 router.get('/cadastro-animal', userController.isLogged, postController.cadastro_animal_form)
-router.post('/cadastro-animal',userController.isLogged)
+router.post('/cadastro-animal',userController.isLogged, postController.cadastro_animal)
 
 module.exports = router
