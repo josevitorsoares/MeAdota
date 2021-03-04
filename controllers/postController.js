@@ -22,7 +22,6 @@ exports.readAllAnimal = function (req, res) {
     let post = new Post(req.body, null)
 
     post.readAll().then(function (results) {
-        // console.log(results)
         res.render('pages/home', { results })
     }).catch(function (error) {
         res.send(error)

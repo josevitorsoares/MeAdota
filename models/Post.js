@@ -8,9 +8,10 @@ let Post = function (data, email) {
 
 
 Post.prototype.create_animal = function (imagem_animal) {
-    let value_buttons_sexo
+    
+    let value_buttons_sexo = ''
 
-    if (this.data.sexo == 'M') {
+    if (this.data.sexo == 'Macho') {
         value_buttons_sexo = 'Macho'
     } else {
         value_buttons_sexo = 'Fêmea'

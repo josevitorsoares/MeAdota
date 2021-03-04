@@ -3,11 +3,7 @@
         <img class="foto-animal" src="http://localhost:3000/files/<%=result.imagem%>" alt="Animal">
         <p class="txt-info">Dados sobre: <span><%=result.nome_animal%></span></p>
         <p class="especie font-dados">Espécie: <span><%=result.especie%></span></p>
-        <%if(result.sexo == 'M'){%>
-            <p class="sexo font-dados">Sexo: <span>Macho</span></p>
-        <%} else{%>
-            <p class="sexo font-dados">Sexo: <span>Fêmea</span></p>
-        <%}%>
+        <p class="sexo font-dados">Sexo: <span><%=result.sexo%></span></p>
         <p class="status font-dados">Status: <span>Disponível</span></p>
         <p class="tamanho font-dados">Tamanho:</p>
         <%if(result.tamanho == 'P'){%>
