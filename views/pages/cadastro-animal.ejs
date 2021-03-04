@@ -7,7 +7,7 @@
             <a class="font-menu-side logout" href="/logout">Sair</a>
         </div>
         <div>
-            <form action="/cadastro-animal" method="POST">
+            <form action="/cadastro-animal" method="POST" enctype="multipart/form-data">
                 <span class="titulo-add">Adicionar Novo Bichinho</span>
                 <input name="nome_animal" class="inputs-add nome-add" type="text" placeholder="Nome do bichinho">
                 <textarea name="descricao" class="inputs-add descricao-add" type="text" placeholder="Descrição"></textarea>
@@ -40,7 +40,7 @@
                     bichinho.</span>
                 <span class="font-radiobutton span-addfoto">Adicione uma foto do seu bichinho:</span>
                 <label class="texto-button-nav label-imagem" for="imagem-bichinho">Selecionar Imagem</label>
-                <input name="imagem_animal" type="file" name="imagem-bichinho" id="imagem-bichinho" accept="image/*">
+                <input name="imagem_animal" type="file" id="imagem-bichinho" accept="image/*">
 
                 <button class="btn-add texto-button-nav" type="submit">Adicionar Bichinho</button>
             </form>

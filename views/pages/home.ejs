@@ -1,214 +1,102 @@
 <%- contentFor('main') %>
-    <div>
-        <div>
-            <header>
-                <p class="bem-vindo">Seja bem-vindo ao</p>
-                <p class="me font-me-adota">Me</p>
-                <p class="adota font-me-adota">Adota.</p>
-                <p class="msg-header">Aqui você irá encontrar diversos pets em busca de uma família.
-                    Você pode tentar diversas buscas até escolher um pet para adotar.</p>
-                <input type="text" class="busca" placeholder="Pesquise por um novo amiguinho...">
-                <img src="/images/home/busca.png" onclick="" class="button-buscar">
-                <p class="dica">Dica: Você pode pesquisar por sexo, porte, cidade, e nome.</p>
-            </header>
-        </div>
-        <div>
-            <p class="msg-bichinhos-adocao fonte">Conheça nossos novos <span class="S1">bichinhos</span> para <span
-                    class="S2">adoção.</span></p>
+    <div class="body-home">
+        <main class="main">
             <div class="container">
-                <div class="row">
-                    <div class="column bordas-bichinhos">
-                        <a href="/animal">
-                            <div class="hover-bichinhos">
-                                <img src="/images/home/bichinho.jpg" class="img-bichinhos" alt="">
+                <div class="bem-vindo">
+                    <p>Seja bem-vindo ao <span> Me<span>Adota</span></span></p>
+                    <span class="msg">Aqui você irá encontrar diversos pets em busca de uma família.
+                        Você pode tentar diversas <br> buscas até escolher um pet para adotar.</span>
+                    <form action="">
+                        <div class="input-group">
+                            <input class="busca" type="text" placeholder="Busque um novo pet para chamar de seu">
+                            <div class="input-group-append">
+                                <button class="button-buscar" type="button">Buscar</button>
                             </div>
-                        </a>
-                        <div class="retangulo"></div>
-                        <a href="/animal">
-                            <h3 class="nome-bichinho">Gatinho</h3>
-                        </a>
-                        <p class="cidade">Amarante/Piauí</p>
-                        <p class="sobre">There are many variations of passages of Lorem Ipsum available</p>
-                    </div>
-                    <div id="espacamentoA1" class="column bordas-bichinhos">
-                        <a href="/animal">
-                            <div class="hover-bichinhos">
-                                <img src="/images/home/bichinho.jpg" class="img-bichinhos" alt="">
-                            </div>
-                        </a>
-                        <div class="retangulo"></div>
-                        <a href="/animal">
-                            <h3 class="nome-bichinho">Gatinho</h3>
-                        </a>
-                        <p class="cidade">Amarante/Piauí</p>
-                        <p class="sobre">There are many variations of passages of Lorem Ipsum available</p>
-                    </div>
-                    <div id="espacamentoA2" class="column bordas-bichinhos">
-                        <a href="/animal">
-                            <div class="hover-bichinhos">
-                                <img src="/images/home/bichinho.jpg" class="img-bichinhos" alt="">
-                            </div>
-                        </a>
-                        <div class="retangulo"></div>
-                        <a href="/animal">
-                            <h3 class="nome-bichinho">Gatinho</h3>
-                        </a>
-                        <p class="cidade">Amarante/Piauí</p>
-                        <p class="sobre">There are many variations of passages of Lorem Ipsum available</p>
-                    </div>
-                    <div id="espacamentoA3" class="column bordas-bichinhos">
-                        <a href="/animal">
-                            <div class="hover-bichinhos">
-                                <img src="/images/home/bichinho.jpg" class="img-bichinhos" alt="">
-                            </div>
-                        </a>
-                        <div class="retangulo"></div>
-                        <a href="/animal">
-                            <h3 class="nome-bichinho">Gatinho</h3>
-                        </a>
-                        <p class="cidade">Amarante/Piauí</p>
-                        <p class="sobre">There are many variations of passages of Lorem Ipsum available</p>
-                    </div>
+                        </div>
+                    </form>
+                    <span class="dica">Dica: Você pode pesquisar por sexo, porte, cidade, e nome.</span>
                 </div>
-                <div class="row">
-                    <div id="espacamentoB1" class="column bordas-bichinhos">
-                        <a href="/animal">
-                            <div class="hover-bichinhos">
-                                <img src="/images/home/bichinho.jpg" class="img-bichinhos" alt="">
-                            </div>
-                        </a>
-                        <div class="retangulo"></div>
-                        <a href="/animal">
-                            <h3 class="nome-bichinho">Gatinho</h3>
-                        </a>
-                        <p class="cidade">Amarante/Piauí</p>
-                        <p class="sobre">There are many variations of passages of Lorem Ipsum available</p>
+                <section>
+                    <div>
+                        <p class="novos fonte-novos">Conheça nossos novos <span class="fonte-novos"
+                                id="bichinhos">bichinhos</span> para <span class="fonte-novos"
+                                id="adocao">adoção</span>.</p>
                     </div>
-                    <div id="espacamentoB2" class="column bordas-bichinhos">
-                        <a href="/animal">
-                            <div class="hover-bichinhos">
-                                <img src="/images/home/bichinho.jpg" class="img-bichinhos" alt="">
+
+                    <div class="row .row-cols-3 row-cols-md-4 mb-3 mt-4">
+                        <% results.forEach(function(result){ %>
+                            <div class="col mb-3">
+                                <div class="card-deck">
+                                    <div class="card border-0" style="width: 18rem;">
+                                        <a class="" href="/paginaAnimal/<%=result.email_usuario_fk%>/<%=result.id_animal%>"><img class="card-img-top card-img-bichinhos" src="http://localhost:3000/files/<%=result.imagem%>"
+                                            alt="Card image cap"></a>
+                                        <div class="retangulo"></div>
+                                        <div class="card-body">
+                                            <a class="link-nome-animal" href="/paginaAnimal/<%=result.email_usuario_fk%>/<%=result.id_animal%>"">
+                                                <h5 class="card-title nome-bichinho"><%=result.nome_animal%></h5>
+                                            </a>
+                                            <h5 class="card-subtitle"><%=result.cidade%></h5>
+                                            <p class="card-text"><%=result.descricao%></p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </a>
-                        <div class="retangulo"></div>
-                        <a href="/animal">
-                            <h3 class="nome-bichinho">Gatinho</h3>
-                        </a>
-                        <p class="cidade">Amarante/Piauí</p>
-                        <p class="sobre">There are many variations of passages of Lorem Ipsum available</p>
+                            <% }); %>
                     </div>
-                    <div id="espacamentoB3" class="column bordas-bichinhos">
-                        <a href="/animal">
-                            <div class="hover-bichinhos">
-                                <img src="/images/home/bichinho.jpg" class="img-bichinhos" alt="">
+                      
+                    <!-- <div class="btns-pages-position">
+                        <button class="button-page-1 fonte-paginacao">1</button>
+                        <button class="buttons-paginacao fonte-paginacao">2</button>
+                        <button class="buttons-paginacao fonte-paginacao">3</button>
+                        <button class="buttons-paginacao fonte-paginacao">4</button>
+                        <button class="buttons-paginacao fonte-paginacao button-prox">Próximo</button>
+                        <button class="buttons-paginacao fonte-paginacao">10</button>
+                    </div> -->
+                    <section class="mensagens">
+                        <p class="pgt-msg">Por que <span id="adotar">adotar</span> um <span
+                                id="bichinho">bichinho?</span></p>
+                        <div class="content-itens">
+                            <div class="card-group mt-4 spacing">
+                                <div class="card border-0 card-itens">
+                                    <div class="card-header card-header-msg border-0 position">
+                                        <div class="div-msg">
+                                            <img src="/images/home/cat.png" class="img-msg" alt="gato">
+                                        </div>
+                                    </div>
+                                    <div class="card-body border-0 card-body-msg">
+                                        <h5 class="card-title card-title-msg">Adotar é um gesto de muito amor e carinho.</h5>
+                                        <p class="card-text card-text-msg">Além de proporcionar um novo lar para o pet, você ganhará um novo amigo que será sempre grato e fiel companheiro!</p>
+                                    </div>
+                                </div>
+                                <div class="card border-0 card-itens">
+                                    <div class="card-header card-header-msg border-0 position">
+                                        <div class="div-msg">
+                                            <img src="/images/home/dog.png" class="img-msg" alt="cachorro">
+                                        </div>
+                                    </div>
+                                    <div class="card-body border-0 card-body-msg">
+                                        <h5 class="card-title card-title-msg">Ao adotar, você ajuda a salvar a vida de um animal.</h5>
+                                        <p class="card-text card-text-msg">A adoção é capaz de salvar a vida de um bichinho que poderia estar nas ruas, abandonado, morrendo de fome e possivelmente sofrendo de maus tratos.</p>
+                                    </div>
+                                </div>
+                                <div class="card border-0 card-itens">
+                                    <div class="card-header card-header-msg border-0 position">
+                                        <div class="div-msg">
+                                            <img src="/images/home/cat-dog.png" class="img-msg-cat-dog" alt="cachoro e gato">
+                                        </div>
+                                    </div>
+                                    <div class="card-body border-0 card-body-msg">
+                                        <h5 class="card-title card-title-msg">Quem vive com pets tem menos estresse.</h5>
+                                        <p class="card-text card-text-msg">Pesquisas feitas na Universidade da Virgínia, nos EUA, concluíram que pessoas que convivem com animais são menos estressadas e ansiosas do que as que moram sozinhas.</p>
+                                    </div>
+                                </div>
                             </div>
-                        </a>
-                        <div class="retangulo"></div>
-                        <a href="/animal">
-                            <h3 class="nome-bichinho">Gatinho</h3>
-                        </a>
-                        <p class="cidade">Amarante/Piauí</p>
-                        <p class="sobre">There are many variations of passages of Lorem Ipsum available</p>
-                    </div>
-                    <div id="espacamentoB4" class="column bordas-bichinhos">
-                        <a href="/animal">
-                            <div class="hover-bichinhos">
-                                <img src="/images/home/bichinho.jpg" class="img-bichinhos" alt="">
-                            </div>
-                        </a>
-                        <div class="retangulo"></div>
-                        <a href="/animal">
-                            <h3 class="nome-bichinho">Gatinho</h3>
-                        </a>
-                        <p class="cidade">Amarante/Piauí</p>
-                        <p class="sobre">There are many variations of passages of Lorem Ipsum available</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div id="espacamentoC1" class="column bordas-bichinhos">
-                        <a href="/animal">
-                            <div class="hover-bichinhos">
-                                <img src="/images/home/bichinho.jpg" class="img-bichinhos" alt="">
-                            </div>
-                        </a>
-                        <div class="retangulo"></div>
-                        <a href="/animal">
-                            <h3 class="nome-bichinho">Gatinho</h3>
-                        </a>
-                        <p class="cidade">Amarante/Piauí</p>
-                        <p class="sobre">There are many variations of passages of Lorem Ipsum available</p>
-                    </div>
-                    <div id="espacamentoC2" class="column bordas-bichinhos">
-                        <a href="/animal">
-                            <div class="hover-bichinhos">
-                                <img src="/images/home/bichinho.jpg" class="img-bichinhos" alt="">
-                            </div>
-                        </a>
-                        <div class="retangulo"></div>
-                        <a href="/animal">
-                            <h3 class="nome-bichinho">Gatinho</h3>
-                        </a>
-                        <p class="cidade">Amarante/Piauí</p>
-                        <p class="sobre">There are many variations of passages of Lorem Ipsum available</p>
-                    </div>
-                    <div id="espacamentoC3" class="column bordas-bichinhos">
-                        <a href="/animal">
-                            <div class="hover-bichinhos">
-                                <img src="/images/home/bichinho.jpg" class="img-bichinhos" alt="">
-                            </div>
-                        </a>
-                        <div class="retangulo"></div>
-                        <a href="/animal">
-                            <h3 class="nome-bichinho">Gatinho</h3>
-                        </a>
-                        <p class="cidade">Amarante/Piauí</p>
-                        <p class="sobre">There are many variations of passages of Lorem Ipsum available</p>
-                    </div>
-                    <div id="espacamentoC4" class="column bordas-bichinhos">
-                        <a href="/animal">
-                            <div class="hover-bichinhos">
-                                <img src="/images/home/bichinho.jpg" class="img-bichinhos" alt="">
-                            </div>
-                        </a>
-                        <div class="retangulo"></div>
-                        <a href="/animal">
-                            <h3 class="nome-bichinho">Gatinho</h3>
-                        </a>
-                        <p class="cidade">Amarante/Piauí</p>
-                        <img class="" src="images/macho.png" alt="">
-                        <p class="sobre">There are many variations of passages of Lorem Ipsum available</p>
-                    </div>
-                </div>
+                        </div>
+                    </section>
+                </section>
             </div>
-        </div>
-        <div>
-            <button class="pagina1">1</button>
-            <button class="pagina2 fonte-paginacao">2</button>
-            <button class="pagina3 fonte-paginacao">3</button>
-            <button class="pagina4 fonte-paginacao">4</button>
-            <button class="proximo fonte-paginacao">Próximo</button>
-            <button class="pagina10 fonte-paginacao">10</button>
-        </div>
-        <div>
-            <p class="pqadotar fonte">Por que <span class="S1">adotar</span> um <span class="S2">bichinho?</span></p>
-            <div class="sobre-cat">
-                <img class="img-sobre" src="/images/home/cat.png" alt="gato">
-                <p class="sobre-titulo fonte-sobre-titulo">Adotar é um gesto de muito amor e carinho.</p>
-                <p class="sobre-subtitulo fonte-sobre-subtitulo">Além de proporcionar um novo lar para o pet, você ganhará um novo amigo que será sempre grato e fiel companheiro!</p>
-            </div>
-            <div class="sobre-dog">
-                <img class="img-sobre" src="/images/home/dog.png" alt="">
-                <p class="sobre-titulo fonte-sobre-titulo">Ao adotar, você ajuda a salvar a vida de um animal</p>
-                <p class="sobre-subtitulo fonte-sobre-subtitulo">A adoção é capaz de salvar a vida de um bichinho que poderia estar nas ruas, abandonado, morrendo de fome e possivelmente sofrendo de maus tratos.</p>
-            </div>
-            <div class="sobre-cat-dog">
-                <img class="img-sobre" src="/images/home/cata-dog.png" alt="">
-                <p class="sobre-titulo fonte-sobre-titulo">Quem vive com pets tem menos estresse.</p>
-                <p class="sobre-subtitulo fonte-sobre-subtitulo">Pesquisas feitas na Universidade da Virgínia, nos EUA, concluíram que pessoas que convivem com animais são menos estressadas e ansiosas do que as que moram sozinhas.</p>
-            </div>
-        </div>
-        <div>
-            <footer class="footer font-footer">Copyright © 2020 MeAdota. Alguns direitos reservados.</footer>
-        </div>
-        
+        </main>
+    </div>
+    <div class="div-footer">
+        <footer class="footer">Copyright © 2020 MeAdota. Alguns direitos reservados.</footer>
     </div>

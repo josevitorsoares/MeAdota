@@ -1,18 +1,14 @@
 const pool = require('./db')
-
 const express = require('express')
 const app = express()
 const session = require('express-session')
-
 const pgSession = require('connect-pg-simple')(session)
-
 const expressLayouts = require('express-ejs-layouts')
 const router = require('./router')
-
+const path = require('path')
 const dotenv = require('dotenv')
 dotenv.config()
 
-const port = 3000
 
 let sessionOptions = session({
     store: new pgSession({
@@ -39,9 +35,11 @@ app.use(function (req, res, next) {
     next()
 })
 
-app.use(express.urlencoded({ extended: false }))
+app.use("/files", express.static(path.resolve(__dirname, 'temp', 'uploads')));
+
+app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 app.use('/', router)
 
-app.listen(port, () => { })
+app.listen(process.env.APP_PORT, () => { })

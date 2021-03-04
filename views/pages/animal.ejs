@@ -1,21 +1,33 @@
 <%- contentFor('main') %>
     <div class="box-central">
-        <img class="foto-animal" src="/images/animal/bichinho.jpg" alt="Animal">
-        <p class="txt-info">Dados sobre: Gatinho</p>
-        <p class="especie font-dados">Espécie: <span>Gato</span></p>
-        <p class="sexo font-dados">Sexo: <span>Macho</span></p>
+        <img class="foto-animal" src="http://localhost:3000/files/<%=result.imagem%>" alt="Animal">
+        <p class="txt-info">Dados sobre: <span><%=result.nome_animal%></span></p>
+        <p class="especie font-dados">Espécie: <span><%=result.especie%></span></p>
+        <%if(result.sexo == 'M'){%>
+            <p class="sexo font-dados">Sexo: <span>Macho</span></p>
+        <%} else{%>
+            <p class="sexo font-dados">Sexo: <span>Fêmea</span></p>
+        <%}%>
         <p class="status font-dados">Status: <span>Disponível</span></p>
         <p class="tamanho font-dados">Tamanho:</p>
-        <p class="tam-p font-tam">P</p>
-        <p class="tam-m font-tam">M</p>
-        <p class="tam-g font-tam">G</p>
-        <p class="cidadeAnimal font-dados">Cidade: <span>Amarante/PI</span> </p>
+        <%if(result.tamanho == 'P'){%>
+            <p class="tam-p tamanho-selected font-tam">P</p>
+            <p class="tam-m tamanho-nao_selected font-tam">M</p>
+            <p class="tam-g tamanho-nao_selected font-tam">G</p>
+        <%} else if(result.tamanho == 'M'){%>
+            <p class="tam-p tamanho-nao_selected font-tam">P</p>
+            <p class="tam-m tamanho-selected font-tam">M</p>
+            <p class="tam-g tamanho-nao_selected font-tam">G</p>
+        <%} else{%>
+            <p class="tam-p tamanho-nao_selected font-tam">P</p>
+            <p class="tam-m tamanho-nao_selected font-tam">M</p>
+            <p class="tam-g tamanho-selected font-tam">G</p>
+        <%}%>
+        <p class="cidadeAnimal font-dados">Cidade: <span><%=result.cidade%>/<%=result.estado%></span> </p>
         <p class="observacoes font-dados">Observações:</p>
-        <p class="txt-observacoes">There are many variations of passages of Lorem Ipsum
-            availablet, but the majority have suffered alteration in some
-            form, by injected humour</p>
+        <p class="txt-observacoes"><%=result.observacoes%></p>
         <p class="doador">Cadastrado por:</p>
-        <p class="nome-doador">José Vitor</p>
+        <p class="nome-doador"><%=result.nome%></p>
         <div>
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
@@ -30,12 +42,12 @@
                             <div>
                                 <p class="informacoes"><span class="editar1">Para adotar ou saber mais sobre este
                                         peludo, entre em contato:</span>
-                                    <br> <span class="editar2">Registrado por:</span> José Vitor <br>
+                                    <br> <span class="editar2">Registrado por:</span> <%=result.nome%> <br>
                                     <img src="/images/animal/whats.png" alt="whatsapp">
-                                    <span class="numero">(11) 95268-3800</span><span class="frase-numero">Informe 
+                                    <span class="numero"><%=result.whatsapp%></span><span class="frase-numero">Informe 
                                         ao doador que conheceu anúncio dele aqui no MeAdota.</span> <br>
                                     <img src="/images/animal/email.png" alt="e-mail">
-                                    <span class="txt-email">jose.vitor.soares@hotmail.com</span> <br><br>
+                                    <span class="txt-email"><%=result.email_usuario_fk%></span> <br><br>
 
                                     <span class="atencao">Atenção!</span><br>
                                     A venda de animais não é permitida aqui no MeAdota!

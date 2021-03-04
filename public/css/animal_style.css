@@ -18,10 +18,14 @@
     font-family: Poppins;
     font-style: normal;
     font-weight: 600;
-    font-size: 32px;
+    font-size: 30px;
     line-height: 48px;
     letter-spacing: 0.02em;
     color: #4A4A4A;
+}
+
+.txt-info span{
+    font-size: 25px;
 }
 
 .font-dados{
@@ -49,7 +53,7 @@
     position: absolute;
     width: 105px;
     height: 22px;
-    left: 1040px;
+    left: 1080px;
     top: 188px;
     /* left: 862px;
     top: 218px; */
@@ -61,7 +65,7 @@
 
 .cidadeAnimal{
     position: absolute;
-    width: 160px;
+    width: 400px;
     height: 22px;
     left: 863px;
     top: 218px;
@@ -75,9 +79,8 @@
     position: absolute;
     width: 160px;
     height: 22px;
-    left: 1040px;
+    left: 1080px;
     top: 218px;
-    /* top: 249px; */
 }
 
 .status span{
@@ -90,7 +93,6 @@
     height: 22px;
     left: 863px;
     top: 249px;
-    /* top: 278px; */
 }
 
 .font-tam{
@@ -104,16 +106,27 @@
     text-transform: uppercase;
 }
 
+.tamanho-selected{
+    border: 1px solid #51D1CD;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #51D1CD;
+}
+
+.tamanho-nao_selected{
+    border: 1px solid #4A4A4A;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #4A4A4A;
+}
+
 .tam-p{
     position: absolute;
     width: 25px;
     height: 25px;
     left: 862px;
     top: 278px;
-    border: 1px solid #51D1CD;
-    box-sizing: border-box;
-    border-radius: 5px;
-    color: #51D1CD;
+    
 }
 
 .tam-m{
@@ -122,10 +135,6 @@
     height: 25px;
     left: 895px;
     top: 278px;
-    border: 1px solid #4A4A4A;
-    box-sizing: border-box;
-    border-radius: 5px;
-    color: #4A4A4A;
 }
 
 .tam-g{
@@ -134,10 +143,6 @@
     height: 25px;
     left: 928px;
     top: 278px;
-    border: 1px solid #4F4F4F;
-    box-sizing: border-box;
-    border-radius: 5px;
-    color: #4A4A4A;
 }
 
 .observacoes{
@@ -180,7 +185,7 @@
 
 .nome-doador{
     position: absolute;
-    width: 80px;
+    width: 150px;
     height: 22px;
     left: 862px;
     top: 465px;
